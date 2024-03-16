@@ -1,27 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
-const TextCycle = ({ texts = [] }: { texts: string[] }) => {
-  const [currentIndex, setCurrentIndex] = useState(texts.length);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        setIsAnimating(false);
-      }, 3000); // Change 3000 to adjust display time per text in milliseconds
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, [texts.length]);
-
-  const textVariants = {
-    hidden: { y: "100%", opacity: 0 }, // Initially outside the box
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-    exit: { y: "-100%", opacity: 0, transition: { duration: 0.5 } },
-  };
+const TextCycle = () => {
 
   return (
     <div className="font-extrabold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200">
