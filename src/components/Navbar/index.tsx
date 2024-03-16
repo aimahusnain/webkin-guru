@@ -13,10 +13,7 @@ const Navbar = () => {
     <nav className="sticky h-16 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
       <MaxWidthWrapper>
         <div className="flex h-16 items-center justify-between border-b border-zinc-200">
-          <Link
-            href="/"
-            className="flex text-2xl z-40 font-bold"
-          >
+          <Link href="/" className="flex text-2xl z-40 font-bold">
             WebKin Solutions
           </Link>
 
@@ -78,7 +75,7 @@ const Navbar = () => {
                   variant: "ghost",
                 })}
               >
-                Let's Talk <MessagesSquare className="w-5 h-5 ml-2" />
+                Let&apos;s Talk <MessagesSquare className="w-5 h-5 ml-2" />
               </Button>
             </Link>
           </div>
