@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import TextCycle from "@/components/Motions/TextCycle";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -28,6 +29,8 @@ const item = {
 };
 
 export default function Home() {
+  const texts = ["Text 1", "Text 2", "Text 3"];
+
   return (
     <>
       <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
@@ -41,9 +44,15 @@ export default function Home() {
               </div>
             </motion.li>
             <motion.li key="2" variants={item}>
-              <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
+              {/* {texts.map((text, index) => ( */}
+              {/* ))} */}
+              {/* <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
                 <span className="text-purple-600">Get a Free Mobile</span>{" "}
                 Friendly Design
+              </h1> */}
+
+              <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
+                <TextCycle />
               </h1>
             </motion.li>
             <motion.li
@@ -66,7 +75,6 @@ export default function Home() {
         </motion.ul>
       </MaxWidthWrapper>
 
-      {/* value proposition section */}
       <div>
         <div className="relative isolate">
           <div
